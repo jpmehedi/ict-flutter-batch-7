@@ -9,7 +9,7 @@ void main () {
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "Hello Bangladesh", 
+            "I'm poor", 
             style: TextStyle(
               // color: Colors.red,
               color: Color(0xffff0000),
@@ -22,6 +22,40 @@ void main () {
             ),
           ),
         ),
+        // body: Center(
+        //  child: Image.asset(
+        //     "assets/poor_man.png",
+        //    height: 200, 
+        //    width: 200,
+        //  ),
+        // ),
+
+        // body: Center(
+        //   child: Image.network(
+        //     "https://picsum.photos/250?image=9",
+        //     height: 100,
+        //     width: 100,
+        //   ),
+        // ),
+
+        // body: Center(
+        //   child: CircleAvatar(
+        //     radius: 80,
+        //     backgroundImage: AssetImage("assets/poor_man.png"),
+        //   ),
+        // ),
+
+        
+        body: Center(
+          child: CircleAvatar(
+            radius: 80,
+            backgroundImage: NetworkImage("https://picsum.photos/250?image=9"),
+          ),
+        ),
+
+      
+      
+      
       ),
     ),
   );
