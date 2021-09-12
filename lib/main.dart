@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
+
 void main () {
   runApp(
     MaterialApp(
       title: "Demo App",
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: "Lobster",
+      ),
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -16,18 +20,20 @@ void main () {
               fontSize: 28,
               // fontWeight: FontWeight.bold,
               fontWeight: FontWeight.w700,
-              fontFamily: "Arial",
+              // fontFamily: "Lobster",
               letterSpacing: 5,
-              fontStyle: FontStyle.italic
+              // fontStyle: FontStyle.italic
             ),
           ),
         ),
+
         // body: Center(
-        //  child: Image.asset(
-        //     "assets/poor_man.png",
-        //    height: 200, 
-        //    width: 200,
-        //  ),
+        //  child: Text(
+        //    "The quick brown fox jumps over the lazy dog",
+        //    style: TextStyle(
+        //      fontFamily: "SourceCodePro"
+        //    ),
+        //  )
         // ),
 
         // body: Center(
@@ -44,15 +50,21 @@ void main () {
         //     backgroundImage: AssetImage("assets/poor_man.png"),
         //   ),
         // ),
-
+        
+        // body: Center(
+        //   child: CircleAvatar(
+        //     radius: 80,
+        //     backgroundImage: NetworkImage("https://picsum.photos/250?image=9"),
+        //   ),
+        // ),
         
         body: Center(
-          child: CircleAvatar(
-            radius: 80,
-            backgroundImage: NetworkImage("https://picsum.photos/250?image=9"),
+          child: Icon(
+            Icons.photo,
+            color: Colors.red,
+            size: 200,
           ),
         ),
-
       
       
       
