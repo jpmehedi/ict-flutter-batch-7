@@ -22,10 +22,11 @@ class HomePage extends StatelessWidget {
         ),
         
         body: Container(
-          width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          height: double.infinity,
+          color: Colors.pink,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
                 color: Colors.red,
@@ -33,11 +34,28 @@ class HomePage extends StatelessWidget {
                   size: 100,
                 ),
               ),
-              Container(
-                color: Colors.green,
-                child: FlutterLogo(
-                  size: 100,
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    color: Colors.green,
+                    child: FlutterLogo(
+                      size: 100,
+                    ),
+                  ),
+                  Container(
+                    color: Colors.green,
+                    child: FlutterLogo(
+                      size: 100,
+                    ),
+                  ),
+                  Container(
+                    color: Colors.green,
+                    child: FlutterLogo(
+                      size: 100,
+                    ),
+                  ),
+                ],
               ),
               Container(
                 color: Colors.orange,
@@ -51,3 +69,31 @@ class HomePage extends StatelessWidget {
       );
   }
 }
+
+// Container(
+//           width: double.infinity,
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.spaceAround,
+//             crossAxisAlignment: CrossAxisAlignment.center,
+//             children: [
+//               Container(
+//                 color: Colors.red,
+//                 child: FlutterLogo(
+//                   size: 100,
+//                 ),
+//               ),
+//               Container(
+//                 color: Colors.green,
+//                 child: FlutterLogo(
+//                   size: 100,
+//                 ),
+//               ),
+//               Container(
+//                 color: Colors.orange,
+//                 child: FlutterLogo(
+//                   size: 100,
+//                 ),
+//               )
+//             ],
+//           ),
+//         )
