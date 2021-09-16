@@ -21,13 +21,33 @@ class HomePage extends StatelessWidget {
           ),
         ),
         
-        body: Center(
-          child: Icon(
-            Icons.photo,
-            color: Colors.red,
-            size: 200,
+        body: Container(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.red,
+                child: FlutterLogo(
+                  size: 100,
+                ),
+              ),
+              Container(
+                color: Colors.green,
+                child: FlutterLogo(
+                  size: 100,
+                ),
+              ),
+              Container(
+                color: Colors.orange,
+                child: FlutterLogo(
+                  size: 100,
+                ),
+              )
+            ],
           ),
-        ),
+        )
       );
   }
 }
