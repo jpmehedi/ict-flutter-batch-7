@@ -14,6 +14,47 @@ class ContactList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("ListView & ListTile"),),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Image.asset("assets/background.jpg"),
+                Positioned(
+                  left: 20,
+                  top: 20,
+                  child: CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage("assets/poor_man.png"),
+                  ),
+                ),
+                Positioned(
+                  left: 20,
+                  top: 80,
+                  child: Text(
+                    "Mehedi Hasan",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 20,
+                  top: 110,
+                  child: Text(
+                    "mehedihasaninfrom@gamil.com",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
       body: ListView.separated(
         separatorBuilder: (BuildContext context, int index){
           return Divider(
@@ -39,6 +80,8 @@ class ContactList extends StatelessWidget {
           );
         },
       )
+
+
     );
   }
 }
