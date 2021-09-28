@@ -1,5 +1,5 @@
 
-import 'package:demo_project/conatact_list.dart';
+import 'package:demo_project/screen_one.dart';
 import 'package:flutter/material.dart';
 
 
@@ -13,7 +13,8 @@ void main () {
       // ),
       // home: HomePage()
       // home: ProfileScreen(),
-      home: ContactList(),
+      // home: ContactList(),
+      home: ScreenOne(),
     ),
   );
 }
