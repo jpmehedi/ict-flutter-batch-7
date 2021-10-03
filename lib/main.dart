@@ -8,12 +8,6 @@ void main () {
     MaterialApp(
       title: "Demo App",
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //   fontFamily: "Lobster",
-      // ),
-      // home: HomePage()
-      // home: ProfileScreen(),
-      // home: ContactList(),
       home: ButtonScreen(),
     ),
   );
