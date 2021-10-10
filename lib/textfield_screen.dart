@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
-class TextFieldScreen extends StatelessWidget {
+class TextFieldScreen extends StatefulWidget {
   const TextFieldScreen({ Key? key }) : super(key: key);
+
+  @override
+  _TextFieldScreenState createState() => _TextFieldScreenState();
+}
+
+class _TextFieldScreenState extends State<TextFieldScreen> {
+
+  bool isTap = false;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +21,11 @@ class TextFieldScreen extends StatelessWidget {
         child: Column(
           children: [
             TextField( 
+              onTap: (){
+                setState(() {
+                  isTap = true;
+                });
+              },
               keyboardType: TextInputType.text,
               obscureText: true,
               obscuringCharacter: "*",
@@ -25,7 +38,7 @@ class TextFieldScreen extends StatelessWidget {
                 ),
                 labelText: "Your Name",
                 labelStyle: TextStyle(
-                  color: Colors.orange
+                  color: isTap ? Colors.black : Colors.orange
                 ),
                 enabledBorder: OutlineInputBorder(
                   // borderSide: BorderSide.none
@@ -45,7 +58,10 @@ class TextFieldScreen extends StatelessWidget {
                 ),
                 filled: true,
                 fillColor: Colors.white,
-                prefixIcon: Icon(Icons.person),
+                prefixIcon: Icon(
+                  Icons.person,
+                  color: isTap ? Colors.orange : Colors.red,
+                ),
                 suffixIcon: Icon(Icons.search)
               ),
             )
