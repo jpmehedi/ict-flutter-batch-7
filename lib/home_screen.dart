@@ -1,4 +1,3 @@
-import 'package:demo_project/profile.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //   height: double.infinity,
     //   color: Colors.red,
     // ),
-    ProfileScreen(),
+    // ProfileScreen(),
     Container(
       width: double.infinity,
       height: double.infinity,
