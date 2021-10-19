@@ -2,7 +2,7 @@ import 'package:demo_project/screen_two.dart';
 import 'package:flutter/material.dart';
 
 class ScreenOne extends StatelessWidget {
-  const ScreenOne({ Key? key }) : super(key: key);
+  ScreenOne({ Key? key });
 
   @override
   Widget build(BuildContext context) {
