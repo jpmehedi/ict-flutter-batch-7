@@ -1,4 +1,4 @@
-abstract class Father{
+mixin Father{
 
 String _name = "Mehedi";
 

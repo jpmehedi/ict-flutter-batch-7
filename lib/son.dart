@@ -1,17 +1,20 @@
 import 'package:demo_project/father.dart';
+import 'package:demo_project/mother.dart';
 
-class Son extends Father{
-  String? name;
-  int? age;
+class Son with Father, Mother{
 
-  Son({this.age, this.name});
+  final int? roll;
+  final String? name;
 
+  Son({this.name, this.roll});
+  
   int a = 20;
   int b = 4;
 
-  about(){
-    return "$name" + "$age";
+  showData() {
+    print("Name: $name Roll: $roll");
   }
+
 
   division (){
     return a / b;
