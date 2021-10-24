@@ -1,5 +1,7 @@
 
 
+
+
 import 'package:demo_project/son.dart';
 
 void main() {
@@ -9,14 +11,14 @@ void main() {
   // print(obj.addTwo());
   // Father father = Father();
   // print(father.addTwo());
-  Son son = Son( name: "assdasdn",age: 20);
+  
+  Son son = Son(roll: 20, name: "Mehedi");
 
+  son.showData();
 
-  print(son.about());
-  // print(son.addTwo());
+  print(son.addTwo());
   // print(son.division());
   // print(son.);
-  print(son.xyz());
   
 
 }
