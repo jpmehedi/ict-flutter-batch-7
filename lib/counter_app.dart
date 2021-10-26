@@ -20,9 +20,49 @@ class _CounterAppState extends State<CounterApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Counter $count App", style: TextStyle(
+      appBar: AppBar(
+          title: Text(
+          "Counter $count App", 
+          style: TextStyle(
           fontSize: SizerUtil.deviceType == DeviceType.web ? 4.sp : 16.sp),
         ),
+        actions: [
+          PopupMenuButton(
+            onSelected: (value){
+              print(value);
+              if(value == 1) {
+                print("Screen one");
+              }else if (value == 2) {
+                print("Screen two");
+              }
+            },
+            elevation: 20,
+            tooltip: "Popup menu",
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+              side: BorderSide(
+                color: Colors.orange,
+                width: 2
+              )
+            ),
+            offset: Offset(
+              5.0, 56.0 
+            ),
+            icon: Icon(Icons.more_vert),
+            itemBuilder: (BuildContext context){
+              return [
+                PopupMenuItem(
+                  child: Text("Item 1"),
+                  value: 1,
+                ),
+                PopupMenuItem(
+                  child: Text("Item 2"),
+                  value: 2,
+                )
+              ];
+            }
+          )
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
