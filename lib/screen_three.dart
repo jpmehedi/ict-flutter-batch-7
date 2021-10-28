@@ -21,7 +21,7 @@ class ScreenThree extends StatelessWidget {
         child: ElevatedButton(
           onPressed: (){
             // Navigator.pop(context);
-            Navigator.popAndPushNamed(context, ScreenOne.path);
+            Navigator.pushNamedAndRemoveUntil(context, ScreenOne.path, (route) => false);
           }, 
           child: Text("Back")
         ),

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class ScreenOne extends StatelessWidget {
  static final String path = "ScreenOne";
   ScreenOne({ Key? key });
+  String name = "Mehedi";
+  int age = 39;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,8 @@ class ScreenOne extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: (){
-            Navigator.pushNamed(context, ScreenTwo.path);
+            // Navigator.pushNamed(context, ScreenTwo.path, arguments: [name, age]);
+            Navigator.pushNamed(context, ScreenTwo.path, arguments:{"name": name, "age": age});
           }, 
           child: Text("Screen One")
         ),
