@@ -1,19 +1,21 @@
 
-import 'package:demo_project/counter_app.dart';
+import 'package:demo_project/screen_one.dart';
+import 'package:demo_project/screen_three.dart';
+import 'package:demo_project/screen_two.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 
 void main () {
   runApp(
-    Sizer(
-      builder: (context, orientation, deviceType){
-        return MaterialApp(
-        title: "Demo App",
-        debugShowCheckedModeBanner: false,
-        home: CounterApp(),
-       );
-      }
-    )
+    MaterialApp(
+      title: "Demo App",
+      debugShowCheckedModeBanner: false,
+      initialRoute: ScreenOne.path,
+      routes: {
+        ScreenOne.path : (context)=> ScreenOne(),
+        ScreenTwo.path: (context)=> ScreenTwo(),
+        ScreenThree.path : (context)=> ScreenThree()
+      },
+    ),
   );
 }
 
