@@ -8,7 +8,8 @@ class ScreenTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final data = ModalRoute.of(context)!.settings.arguments as List;
-    final data = ModalRoute.of(context)!.settings.arguments as Map;
+    final data = ModalRoute.of(context)!.settings.arguments as List;
+    print("data: $data");
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -24,8 +25,18 @@ class ScreenTwo extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Text("Name: ${data[0]} Age: ${data[1]}"),
-            Text("Name: ${data["name"]} Age: ${data["age"]}"),
+            Expanded(
+              child: ListView.builder(
+                itemCount: data.length,
+                itemBuilder: ( BuildContext context, int index){
+                  return ListTile(
+                    leading: Text(data[index]["id"].toString()),
+                    title: Text(data[index]["name"]),
+                    subtitle: Text(data[index]["email"]),
+                  );
+                }
+              ),
+            ),
             ElevatedButton(
               onPressed: (){
                 Navigator.pushNamed(context, ScreenThree.path);
