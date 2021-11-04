@@ -12,9 +12,9 @@ class ResponsiveScreen extends StatelessWidget {
       appBar: AppBar(title: Text("Responsive $width"),),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: [ 
             Text("$height"),
-           width < 780 ? Column(
+            width < 780 ? Column(
              children: [
                 Container(
                   width: MediaQuery.of(context).size.width,

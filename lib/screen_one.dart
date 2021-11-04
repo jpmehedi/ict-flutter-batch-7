@@ -1,5 +1,6 @@
 import 'package:demo_project/screen_two.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ScreenOne extends StatelessWidget {
  static const String path = "ScreenOne";
@@ -25,6 +26,38 @@ class ScreenOne extends StatelessWidget {
      "email": "Nusrat@genex.com"
     }
   ];
+
+
+  Future launchURL (String url) async {
+    if(await canLaunch(url)) {
+      return launch(url);
+    }else{
+      throw "Could not launch $url";
+    }
+  }
+  Future launchEmail (String url) async {
+    if(await canLaunch(url)) {
+      return launch(url);
+    }else{
+      throw "Could not launch $url";
+    }
+  }
+  Future launchPhone (String url) async {
+    if(await canLaunch(url)) {
+      return launch(url);
+    }else{
+      throw "Could not launch $url";
+    }
+  }
+
+  Future launchSms (String url) async {
+    if(await canLaunch(url)) {
+      return launch(url);
+    }else{
+      throw "Could not launch $url";
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +87,12 @@ class ScreenOne extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).primaryColor,
-        onPressed: (){},
+        onPressed: ()async{
+        //  await launchURL("https://flutter.dev/");
+          // await launchEmail('mailto:${people[1]["email"]}?subject=News&body=New%20plugin');
+          // await launchPhone("tel:+1 555 010 999");
+          await launchSms('sms:asdnasjjdn mas dfjas');
+        },
         child: Icon(
           Icons.add,
           color: Theme.of(context).iconTheme.color,
