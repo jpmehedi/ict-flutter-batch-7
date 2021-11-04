@@ -54,7 +54,7 @@ void main () {
       
       ),
       themeMode: ThemeMode.light,
-      initialRoute: ResponsiveScreen.path,
+      initialRoute: ScreenOne.path,
       routes: {
         ResponsiveScreen.path:(ctx)=> ResponsiveScreen(),
         ScreenOne.path : (context)=> ScreenOne(),
