@@ -3,6 +3,7 @@ import 'package:demo_project/responsive_screen.dart';
 import 'package:demo_project/screen_one.dart';
 import 'package:demo_project/screen_three.dart';
 import 'package:demo_project/screen_two.dart';
+import 'package:demo_project/user_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -54,8 +55,9 @@ void main () {
       
       ),
       themeMode: ThemeMode.light,
-      initialRoute: ScreenOne.path,
+      initialRoute: PostScreen.path,
       routes: {
+        PostScreen.path : (context)=> PostScreen(),
         ResponsiveScreen.path:(ctx)=> ResponsiveScreen(),
         ScreenOne.path : (context)=> ScreenOne(),
         ScreenTwo.path: (context)=> ScreenTwo(),
