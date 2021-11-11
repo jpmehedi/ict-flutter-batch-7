@@ -17,6 +17,9 @@
       <data android:mimeType="*/*" />
     </intent>
   </queries>
+  <!-- Required to fetch data from the internet. -->
+   <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="demo_project"
         android:icon="@mipmap/ic_launcher">
