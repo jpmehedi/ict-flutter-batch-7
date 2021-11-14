@@ -5,6 +5,7 @@ import 'package:news_app/screens/entertainment.dart';
 import 'package:news_app/screens/sports.dart';
 
 class HomeScreen extends StatelessWidget {
+    static const String path = "HomeScreen";
   const HomeScreen({ Key? key }) : super(key: key);
 
   @override
