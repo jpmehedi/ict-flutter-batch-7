@@ -2,7 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:news_app/screens/details.dart';
 class AllNews extends StatefulWidget {
+   static const String path = "AllNews";
   const AllNews({ Key? key }) : super(key: key);
 
   @override
@@ -10,7 +12,7 @@ class AllNews extends StatefulWidget {
 }
 
 class _AllNewsState extends State<AllNews> {
-  final String url = "https://newsapi.org/v2/everything?q=tesla&from=2021-10-11&sortBy=publishedAt&apiKey=4159422918ad47e1bca6d72a504c5da6";
+  final String url = "https://newsapi.org/v2/everything?q=tesla&from=2021-10-14&sortBy=publishedAt&apiKey=4159422918ad47e1bca6d72a504c5da6";
   List allNews = [];
 
   Future getAllNews() async{
@@ -57,6 +59,9 @@ class _AllNewsState extends State<AllNews> {
           return Card(
             elevation: 10,
             child: ListTile(
+              onTap: (){
+                Navigator.pushNamed(context, DetailScreen.path, arguments: allNews[index]);
+              },
               isThreeLine: true,
               title: Text(allNews[index]['title']),
               subtitle: Column(
