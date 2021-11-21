@@ -50,7 +50,7 @@ class DetailScreen extends StatelessWidget {
             ),
             SizedBox(height: 8,),
             Hero(
-              tag: "tag1",
+              tag:"${newsData["url"]}",
               child: Image.network(
                 newsData["urlToImage"],
                 height: 250,
