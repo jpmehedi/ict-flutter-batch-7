@@ -12,7 +12,7 @@ class AllNews extends StatefulWidget {
 }
 
 class _AllNewsState extends State<AllNews> {
-  final String url = "https://newsapi.org/v2/everything?q=tesla&from=2021-10-16&sortBy=publishedAt&apiKey=4159422918ad47e1bca6d72a504c5da6";
+  final String url = "https://newsapi.org/v2/everything?q=tesla&from=2021-10-20&sortBy=publishedAt&apiKey=4159422918ad47e1bca6d72a504c5da6";
   List allNews = [];
 
   Future getAllNews() async{
@@ -72,7 +72,7 @@ class _AllNewsState extends State<AllNews> {
                 ],
               ),
               trailing: Hero(
-                tag: "tag1",
+                tag:"${allNews[index]['url']}",
                 child: Image.network(
                   getImage(allNews[index]['urlToImage']),
                   height: 100,
