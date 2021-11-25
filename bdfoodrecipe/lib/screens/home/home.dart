@@ -1,5 +1,5 @@
 import 'package:bdfoodrecipe/screens/bread/bread.dart';
-import 'package:bdfoodrecipe/screens/desert/desert.dart';
+import 'package:bdfoodrecipe/screens/dessert/dessert.dart';
 import 'package:bdfoodrecipe/screens/fast_food/fast_food.dart';
 import 'package:bdfoodrecipe/screens/non_veg/non_veg.dart';
 import 'package:bdfoodrecipe/screens/rice/rice.dart';
@@ -29,13 +29,14 @@ class HomeScreen extends StatelessWidget {
           children: [
             SizedBox(height: 10,),
             TabBar(
+                isScrollable: true,
                 unselectedLabelColor: Colors.redAccent,
                 indicatorSize: TabBarIndicatorSize.tab,
                 indicator: BoxDecoration(
                     gradient: LinearGradient(
                         colors: [Colors.redAccent, Colors.orangeAccent]
                 ),
-                borderRadius: BorderRadius.circular(50),
+                borderRadius: BorderRadius.circular(8),
                 color: Colors.redAccent
               ),
               tabs: [
@@ -63,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   RiceScreen(),
                   BreadScreen(),
-                  DesertScreen(),
+                  DessertScreen(),
                   FastFoodScreen(),
                   NonVegScreen()
                 ]
