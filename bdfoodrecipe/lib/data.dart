@@ -1,9 +1,9 @@
-Map<String , dynamic> bdfood = {
+Map<String, dynamic> bdfood = <String, dynamic>{
   "bread": [
     {
       "id": "01",
       "title": "My Favorite Butter Cookie Recipe",
-      "image": "image/...",
+      "image": "assets/images/bread/1.jpg",
       "ingredients": [
         "1/2 cup Salted Butter",
         "1/2 cup Powdered sugar",
@@ -29,7 +29,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "02",
       "title": "Teler Poa Pitha Recipe | Pakan Pitha",
-      "image": "image/...",
+      "image": "assets/images/bread/2.jpg",
       "ingredients": [
         "2 cups Rice flour",
         "1/2 cup Wheat flour",
@@ -53,7 +53,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "03",
       "title": "Fluffy Fried Bread | Fulko Luchi Recipe | Indian Bhatura",
-      "image": "image/...",
+      "image": "assets/images/bread/3.jpg",
       "ingredients": [
         "1 cup Flour",
         "1/2 tsp Sugar",
@@ -73,7 +73,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "04",
       "title": "Hot Milk Chocolate Cake Recipe",
-      "image": "image/...",
+      "image": "assets/images/bread/4.jpg",
       "ingredients": [
         "2 pcs Egg",
         "1 cup Flour",
@@ -110,7 +110,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "01",
       "title": "Narkel Naru Recipe",
-      "image": "image/...",
+      "image": "assets/images/dessert/1.jpg",
       "ingredients": [
         "1 and 1/2 cup Shredded coconut",
         "1 cup Sugarcane jaggery",
@@ -128,7 +128,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "02",
       "title": "Sweet Yogurt Recipe",
-      "image": "image/...",
+      "image": "assets/images/dessert/2.jpg",
       "ingredients": [" 3 cups Milk", " 1/2 cup Sugar", "1/2 cup Sour yogurt"],
       "directions": [
         "In a pan take sugar and water. Boil on low medium heat. When it turns into caramel add milk. Keep stirring and reduce to 2/3. Make it cold to lukewarm, but not completely cold.",
@@ -142,7 +142,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "03",
       "title": "Crispy Vaja Puli Pitha Recipe",
-      "image": "image/...",
+      "image": "assets/images/dessert/3.jpg",
       "ingredients": [
         " 1 and 1/2 cup Shreded coconut",
         " 1/2 cup Sugar",
@@ -242,114 +242,6 @@ Map<String , dynamic> bdfood = {
       ],
 
       "youtubeUrl": "https://youtu.be/buCaShjtNms"
-    },
-    {
-      "id": "04",
-      "title": "Crispy Piyaju Recipe ",
-      "image": "assets/images/fast_food/4.jpg",
-      "ingredients": [
-        "1 cup Mixed dals",
-        "1 cup Chopped onion",
-        "2 tbsp Chopped green chilies",
-        "To taste Salt",
-        "1/2 tsp Turmeric powder",
-        "To fry Oil"
-      ],
-
-      "directions": [
-        "Mix dals together. Soak in water for 4 hours. Wash with clean water thoroughly and drain well.",
-        "Now blend dals in a blender till near to paste. Do not use any water while blending. Now add chopped onions, green chilies, turmeric powder and salt. Mix everything well with your hand and keep it aside for a while.",
-        "Heat some oil in a fry pan enough to deep fry. Take some dal mixture, flatten to make small piyaju shape and release into the hot oil to fry. Keep the flame medium high while frying. Fry both sides till brown and crispy.",
-        "When both sides turn into reddish brown in color and seems crispy, take out from the oil by a strainer to remove extra oil. Leave them on a kitchen tissue to soak the excess oil. Serve warm to enjoy crispiness."
-      ],
-      "youtubeUrl": "https://youtu.be/EC8vZO7IXqc"
-    },
-    {
-      "id": "05",
-      "title": "Teler Poa Pitha Recipe",
-      "image": "assets/images/fast_food/5.jpg",
-      "ingredients": [
-        "2 cups Rice flour",
-        "1/2 cup Wheat flour",
-        "3/4 cup Jaggery",
-        "1/2 cup Liquid milk",
-        "To taste Salt",
-        "To frying Oil"
-      ],
-
-      "directions": [
-        "In a bowl add rice flour, all purpose wheat flour, salt, jaggery and milk melted together. Mix everything very well. Add warm water gradually and make a smooth batter. Whisk the batter for 2-3 minutes till smooth. Cover and rest for 30 minutes.",
-
-        "Heat oil in a pan for deep fry. At first heat oil on medium flame. Then turn flame into low and pour a spoonful of batter in the oil. Then allow it to rise and puff up. You can tap oil by a spoon or spatula on the top to rise up. Then fry both sides till brown and perfectly fried",
-
-        "Heat some oil in a fry pan enough to deep fry. Take some dal mixture, flatten to make small piyaju shape and release into the hot oil to fry. Keep the flame medium high while frying. Fry both sides till brown and crispy.",
-
-        "When done, take out of the oil by a strainer and keep on a tissue paper to absorb excess oil. Then serve."
-      ],
-      "youtubeUrl": "https://youtu.be/_V-IZX3VBi8"
-    },
-    {
-      "id": "06",
-      "title": "Hot Milk Chocolate Cake Recipe",
-      "image": "assets/images/fast_food/6.jpg",
-      "ingredients": [
-        "2 pcs Egg",
-        "1 cup Flour",
-        "1/4 cup Cocoa powder",
-        "1 tbsp Milk powder",
-        "1 tsp Baking powder",
-        "1/4 tsp Baking soda",
-        "3/4 cup Sugar",
-        "2 tbsp Oil",
-        "1 tsp Vanilla essence",
-        "1 tbsp Butter",
-        "1/2 cup Liquid milk"
-      ],
-
-      "directions": [
-        "Firstly mix all dry ingredients together and strain with a strainer. Keep aside.",
-
-        "In a blender jug take eggs of normal temperature, sugar, oil and vanilla essence. Blend very well for 2-4 minutes or till sugar melt. When they turn into bubbly and fluffy mixture stop blending.",
-
-        "In a large bowl take all dry ingredients and mix well. Then gradually add egg mixture and mix with a spatula or whisk very patiently. Do not Over mix .",
-
-        "Boil milk and butter in a pan. Then gradually add this with cake batter and mix with a spatula or whisk.",
-        "Grease a cake mold with oil or butter. Place a baking paper at bottom. Pour cake mix/batter in it and tap few times to remove bubbles.",
-        "Preheat a pan with lid for 5 minutes. Then place a stand and keep cake mold in it. Bake on very low flame for 40-45 minutes with the lid. If you want to bake in oven preheat your oven for 10 minutes. Then bake your cake in 160°C for 25-30 minutes.",
-        "After 45 minutes check with a toothpick. If toothpick comes out clean the cake is ready to serve. If not bake for 5 minutes more. Follow the same process for oven also. Then take the mold out and keep to let it cool down completely. De-mold with a knife or spoon. Cut into pieces of your favorite size and serve."
-      ],
-      "youtubeUrl": "https://youtu.be/ZSrepCG9_vM"
-    },
-
-    {
-      "id": "07",
-      "title": "Delicious Fish Kebab Recipe",
-      "image": "assets/images/fast_food/7.jpg",
-      "ingredients": [
-        "4 pcs Fish",
-        "150 gm Boiled mashed potato",
-        "1 tbsp Fried onion",
-        "1 tsp Chopped green chilies",
-        "1 tbsp Chopped coriander leaves",
-        "1/2 tsp Cumin powder",
-        "1/2 tsp Coriander powder",
-        "1/2 tsp Garam masala powder",
-        "1/2 tsp Red chili powder",
-        "1 tsp Ginger-garlic paste",
-        "1/2 Beaten egg",
-        "To fry Oil"
-      ],
-
-      "directions": [
-        "Shallow fry fish with salt and Turmeric. Cool down and remove all the bones carefully. Take them in a large mixing bowl.",
-
-        "Add all ingredients in the bowl except oil. Now mix with the fish with your hands very well. Then take some and shape like small chop or cutlets.",
-
-        "In a small bowl beat one egg. Now first dip the cutlets in the eggs and carefully add in oil for frying. Repeat this process for all pieces.",
-
-        "Fry them slowly on medium-low heat patiently till brown. When it’s done take them out of the oil using a strainer and leave on a tissue for a while to absorb excess oil. Serve warm with your favorite ketchup or chutney."
-      ],
-      "youtubeUrl": "https://youtu.be/a1q76aYyHuw"
     }
   ],
   "rice": [
@@ -402,7 +294,7 @@ Map<String , dynamic> bdfood = {
 
     {
       "id": "02",
-      "title": "Exceptional Ilish Polao Recipe",
+      "title": " Exceptional Ilish Polao Recipe",
       "image": "assets/images/rice/2.jpg",
       "ingredients": [
         "5 pcs Hilsa fish",
@@ -456,7 +348,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "01",
       "title": "Chicken Chow Mein/Noodles Recipe",
-      "image": "image/...",
+      "image": "assets/images/non_veg/1.jpg",
       "ingredients": [
         "2 packets Noodles",
         "100 gm Boneless chicken",
@@ -487,7 +379,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "02",
       "title": "Beef Curry with Potatoes | Gorur Mangsho Alu Diye",
-      "image": "image/...",
+      "image": "assets/images/non_veg/2.jpg",
       "ingredients": [
         "1 kg Beef",
         "1/2 cup Vegetable oil",
@@ -527,7 +419,7 @@ Map<String , dynamic> bdfood = {
     {
       "id": "03",
       "title": "Super Easy Kachchi Biryani Recipe",
-      "image": "image/...",
+      "image": "assets/images/non_veg/3.jpg",
       "ingredients": [
         "2 kg Mutton or beef",
         "1 kg Aromatic rice (chinigura/kalijeera)",
