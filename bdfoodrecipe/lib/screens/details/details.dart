@@ -1,3 +1,4 @@
+import 'package:bdfoodrecipe/screens/favorite/favorite.dart';
 import 'package:bdfoodrecipe/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -8,11 +9,21 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double size = MediaQuery.of(context).size.width;
-    final Map data = ModalRoute.of(context)!.settings.arguments as Map;
+    final Map items = ModalRoute.of(context)!.settings.arguments as Map;
+    print(items);
     return  Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text("Details"),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Details"),
+            SizedBox(height: 4,),
+            Text("Catagory: ${items["category"]}", style: TextStyle(
+              color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500
+            )),
+          ],
+        ),
         actions: [
           IconButton(
             onPressed: (){}, 
@@ -31,7 +42,7 @@ class DetailScreen extends StatelessWidget {
               fit: StackFit.loose,
               children: [
                 Image.asset(
-                  data['image'],
+                  items["data"]['image'],
                   width: double.infinity,
                   height: 200,
                   fit: BoxFit.cover,
@@ -39,13 +50,15 @@ class DetailScreen extends StatelessWidget {
                 Positioned(
                   bottom: 0,
                   child: Container(
-                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.only(left: 10),
                     width: size,
                     height: 56,
                     color: Colors.black.withOpacity(0.50),
-                    child: Text(data['title'], style: TextStyle(
-                      color: Colors.white, fontSize: 24, fontWeight: FontWeight.w700
-                    ),),
+                    child: Center(
+                      child: Text(items["data"]['title'], style: TextStyle(
+                        color: Colors.white, fontSize: 24, fontWeight: FontWeight.w700
+                      ),),
+                    ),
                   ),
                 )
               ],
@@ -54,11 +67,15 @@ class DetailScreen extends StatelessWidget {
           Row(
             children: [
               CustomButton(
+                onTap: (){},
                 icon: Icons.check_outlined,
                 lebel: "Cooked",
                 color: Colors.orange,
               ),
               CustomButton(
+                onTap: (){
+                  Navigator.pushNamed(context, FavoriteScreen.path, arguments: items["data"]);
+                },
                 icon: Icons.favorite,
                 lebel: "Favorite",
                 color: Colors.pink,
@@ -87,7 +104,7 @@ class DetailScreen extends StatelessWidget {
                       thickness: 2,
                       color: Colors.orange,
                     ),
-                    for(int i = 0; i < data['ingredients'].length; i++)
+                    for(int i = 0; i < items["data"]['ingredients'].length; i++)
                     Row(
                       children: [
                         Container(
@@ -100,7 +117,7 @@ class DetailScreen extends StatelessWidget {
                         ),
                         SizedBox(width: 8,),
                         Text(
-                          data['ingredients'][i],
+                          items["data"]['ingredients'][i],
                           style: TextStyle(
                             color: Colors.black, fontSize: 14, fontWeight: FontWeight.w500
                           )
@@ -118,7 +135,7 @@ class DetailScreen extends StatelessWidget {
                       thickness: 2,
                       color: Colors.orange,
                     ),
-                    for(int i = 0; i < data['directions'].length; i++)
+                    for(int i = 0; i < items["data"]['directions'].length; i++)
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -136,7 +153,7 @@ class DetailScreen extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(bottom: 8),
                             child: Text(
-                              data['directions'][i],
+                              items["data"]['directions'][i],
                               style: TextStyle(
                                 color: Colors.black, fontSize: 14, fontWeight: FontWeight.w500
                               )
