@@ -8,6 +8,7 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double size = MediaQuery.of(context).size.width;
+    final Map data = ModalRoute.of(context)!.settings.arguments as Map;
     return  Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
@@ -30,7 +31,7 @@ class DetailScreen extends StatelessWidget {
               fit: StackFit.loose,
               children: [
                 Image.asset(
-                  "assets/images/rice/1.jpg",
+                  data['image'],
                   width: double.infinity,
                   height: 200,
                   fit: BoxFit.cover,
@@ -42,7 +43,7 @@ class DetailScreen extends StatelessWidget {
                     width: size,
                     height: 56,
                     color: Colors.black.withOpacity(0.50),
-                    child: Text("This is title", style: TextStyle(
+                    child: Text(data['title'], style: TextStyle(
                       color: Colors.white, fontSize: 24, fontWeight: FontWeight.w700
                     ),),
                   ),
@@ -63,24 +64,90 @@ class DetailScreen extends StatelessWidget {
                 color: Colors.pink,
               ),
               CustomButton(
-                icon: Icons.photo,
-                lebel: "Photos",
+                icon: Icons.video_camera_back,
+                lebel: "Video",
                 color: Colors.red,
               )
             ],
           ),
-          Container(
-            padding: EdgeInsets.all(15),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Ingredients"
+          Expanded(
+            child: SingleChildScrollView(
+              child: Container(
+                padding: EdgeInsets.all(15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Ingredients",
+                       style: TextStyle(
+                          color: Colors.red, fontSize: 24, fontWeight: FontWeight.w700
+                      )
+                    ),
+                    Divider(
+                      thickness: 2,
+                      color: Colors.orange,
+                    ),
+                    for(int i = 0; i < data['ingredients'].length; i++)
+                    Row(
+                      children: [
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(4)
+                          ),
+                        ),
+                        SizedBox(width: 8,),
+                        Text(
+                          data['ingredients'][i],
+                          style: TextStyle(
+                            color: Colors.black, fontSize: 14, fontWeight: FontWeight.w500
+                          )
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 16,),
+                    Text(
+                      "Directions",
+                       style: TextStyle(
+                          color: Colors.red, fontSize: 24, fontWeight: FontWeight.w700
+                      )
+                    ),
+                    Divider(
+                      thickness: 2,
+                      color: Colors.orange,
+                    ),
+                    for(int i = 0; i < data['directions'].length; i++)
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 8,
+                          height: 8,
+                          margin: EdgeInsets.only(top: 4),
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(4)
+                          ),
+                        ),
+                        SizedBox(width: 8,),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 8),
+                            child: Text(
+                              data['directions'][i],
+                              style: TextStyle(
+                                color: Colors.black, fontSize: 14, fontWeight: FontWeight.w500
+                              )
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
                 ),
-                Text(
-                  "Details"
-                )
-              ],
+              ),
             ),
           )
         ],
