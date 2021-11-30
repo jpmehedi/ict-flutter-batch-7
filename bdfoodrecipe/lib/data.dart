@@ -279,7 +279,7 @@ Map<String, dynamic> bdfood = <String, dynamic>{
         "8-10 pcs Cashew nuts",
         "To taste Salt"
       ],
-      "direction": [
+      "directions": [
         "Wash & clean the meat pieces. Drain water well.",
         "Make biryani spices mix. For this in a grinder take star anise, black cardamom, nutmeg, mace, white pepper, cloves, cardamom, cinnamon, black pepper, bay leaves & red chilies and grind them. Keep it aside.",
         "Peel off & cut potatoes into comparatively bigger size, mix with pinches of salt & turmeric powder or saffron for color and shallow or deep fry them till brown. Keep them aside.",
@@ -306,7 +306,7 @@ Map<String, dynamic> bdfood = <String, dynamic>{
         "2 cups Coconut milk",
         "To taste Salt"
       ],
-      "direction": [
+      "directions": [
         "Cut hilsa fish into pieces. Wash and drain properly. Use a tissue paper to soak excess water. Marinate fish pieces with some salt and turmeric powder.",
         "Now heat oil in a pan. Fry both sides of fish till golden brown. Keep them aside. Add 3/4 cup onion and 7/8 green chilies and fry them till golden brown. Keep this aside too.",
         "Add remaining onion and chilies in oil. Fry for 30 seconds. Add 2 cups of coconut milk, 3 cups of water, salt and turmeric powder. You can add some sugar if you like. But very small amount like 2 tsp. Cover with the lid and bring it to boil. Then add rice which is washed and drained before. Cover and cook on medium-high flame till 80% cooked and the water dried.",
@@ -334,7 +334,7 @@ Map<String, dynamic> bdfood = <String, dynamic>{
         "To taste Salt"
       ],
 
-      "direction": [
+      "directions": [
         "At first a spice mix or special beef tehari masala mix will be prepared. To make this, in a grinder take 2 large piece of cinnamons, 7/8 pieces of black pepper, 2 small pieces of mace, 2 pieces of bay leaves, 5 pieces of kubeb (kabab chini), 7/8 pieces of white pepper, 1/2 tsp shah jeera, 6/8 pieces of cardamom, 4 pieces of cloves, 1/2 tsp jeera, 1/2 tsp coriander and 1/2 of a nutmeg and grind all of them. Keep it aside.",
         "Clean and wash beef and drain water properly. Cut into small pieces and take in a bowl. Add yogurt, ginger-garlic pastes, papaya paste, spice/masala mix that we made before and salt and give a nice mix with your hand. Marinate for 30 minutes.",
         "Heat oil in a pan and add chopped onion and green chilies. Cook for a minute. Then add marinated beef and cook for 3-5 minutes. No need to add water this time since the meat releases water. Cook till the water dried. Then add 2 cups of water and cook till the meat gets tender or soft. It may take 30-40 minutes.",

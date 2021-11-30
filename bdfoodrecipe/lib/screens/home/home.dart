@@ -6,6 +6,7 @@ import 'package:bdfoodrecipe/screens/rice/rice.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String path = "HomeScreen";
   const HomeScreen({ Key? key }) : super(key: key);
 
   @override
@@ -39,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 color: Colors.redAccent
               ),
-              tabs: [
+              tabs: [  
                 Tab(
                   child: Text("Rice"),
                 ),
