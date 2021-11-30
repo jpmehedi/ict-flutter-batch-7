@@ -1,6 +1,7 @@
 import 'package:bdfoodrecipe/screens/bread/bread.dart';
 import 'package:bdfoodrecipe/screens/dessert/dessert.dart';
 import 'package:bdfoodrecipe/screens/fast_food/fast_food.dart';
+import 'package:bdfoodrecipe/screens/favorite/favorite.dart';
 import 'package:bdfoodrecipe/screens/non_veg/non_veg.dart';
 import 'package:bdfoodrecipe/screens/rice/rice.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,9 @@ class HomeScreen extends StatelessWidget {
           centerTitle: true,
           actions: [
             IconButton(
-              onPressed: (){}, 
+              onPressed: (){
+                Navigator.pushNamed(context, FavoriteScreen.path);
+              }, 
               icon: Icon(Icons.favorite)
             )
           ],
@@ -29,35 +32,38 @@ class HomeScreen extends StatelessWidget {
         body: Column(
           children: [
             SizedBox(height: 10,),
-            TabBar(
-                isScrollable: true,
-                unselectedLabelColor: Colors.redAccent,
-                indicatorSize: TabBarIndicatorSize.tab,
-                indicator: BoxDecoration(
-                    gradient: LinearGradient(
-                        colors: [Colors.redAccent, Colors.orangeAccent]
-                ),
-                borderRadius: BorderRadius.circular(8),
-                color: Colors.redAccent
-              ),
-              tabs: [  
-                Tab(
-                  child: Text("Rice"),
-                ),
-                Tab(
-                    child: Text("Bread"),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: TabBar(
+                  isScrollable: true,
+                  unselectedLabelColor: Colors.redAccent,
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicator: BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: [Colors.redAccent, Colors.orangeAccent]
                   ),
-                Tab(
-                    child: Text("Desert"),
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.redAccent
+                ),
+                tabs: [  
+                  Tab(
+                    child: Text("Rice"),
                   ),
+                  Tab(
+                      child: Text("Bread"),
+                    ),
+                  Tab(
+                      child: Text("Desert"),
+                    ),
     
-                Tab(
-                    child: Text("Fast-Food"),
-                  ),
-                Tab(
-                    child: Text("Non-Veg"),
-                  ),
-              ],
+                  Tab(
+                      child: Text("Fast-Food"),
+                    ),
+                  Tab(
+                      child: Text("Non-Veg"),
+                    ),
+                ],
+              ),
             ),
 
             Expanded(
