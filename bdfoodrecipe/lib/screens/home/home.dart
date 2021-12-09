@@ -28,7 +28,65 @@ class HomeScreen extends StatelessWidget {
             )
           ],
         ),
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: Container(
+            color: Colors.black54,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset("assets/images/non_veg/1.jpg"),
+                ListTile(
+                  onTap: (){},
+                  trailing: Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: Colors.red
+                    ),
+                    child: Center(child: Text("0", style: TextStyle(color: Colors.white),)),
+                  ),
+                  title: Text("My Recipe", style: TextStyle(color: Colors.white),),
+                ),
+                Divider(thickness: 0.5, color: Colors.white,height: 0,),
+                ListTile(
+                  onTap: (){},
+                  title: Text("Favorite", style: TextStyle(color: Colors.white),),
+                ),
+                Divider(thickness: 0.5, color: Colors.white,height: 0,),
+                ListTile(
+                  onTap: (){},
+                  title: Text("Cooked", style: TextStyle(color: Colors.white),),
+                ),
+                Divider(thickness: 0.5, color: Colors.white,height: 0,),
+                ListTile(
+                  onTap: (){},
+                  title: Text("Tips", style: TextStyle(color: Colors.white),),
+                ),
+
+                Container(
+                  padding: EdgeInsets.all(15),
+                  width: double.infinity,
+                  color: Colors.black,
+                  child: Text(
+                    "More",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+
+               ListTile(
+                  onTap: (){},
+                  leading: Icon(Icons.search, color: Colors.white,),
+                  title: Text("Search", style: TextStyle(color: Colors.white),),
+                ),
+                Divider(thickness: 0.2, color: Colors.white,height: 0,),
+                
+              ],
+            ),
+          ),
+        ),
         body: Column(
           children: [
             SizedBox(height: 10,),
