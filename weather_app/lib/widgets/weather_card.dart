@@ -18,7 +18,7 @@ class WeatherCard extends StatelessWidget {
             top: 30,
             child: Container(
                 width: 238,
-                height: 292,
+                height: 250,
                 padding: EdgeInsets.only(bottom: 25),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -30,14 +30,14 @@ class WeatherCard extends StatelessWidget {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight
                   ),
-                  boxShadow: [
-                      BoxShadow(
-                        color: Color(0xff4B3EAE).withOpacity(0.5),
-                        spreadRadius: 10,
-                        blurRadius: 25,
-                        offset: Offset(0, 7), // changes position of shadow
-                      ),
-                  ],
+                  // boxShadow: [
+                  //     BoxShadow(
+                  //       color: Color(0xff4B3EAE).withOpacity(0.5),
+                  //       spreadRadius: 7,
+                  //       blurRadius: 25,
+                  //       offset: Offset(5, 5), // changes position of shadow
+                  //     ),
+                  // ],
                   borderRadius: BorderRadius.circular(40)
                 ),
                 child: Column(
@@ -46,7 +46,7 @@ class WeatherCard extends StatelessWidget {
                   children: [
                     Image.asset(
                       "assets/moon_cloud_fast_wind.png",
-                      scale: 1.5,
+                      scale: 2,
                     ),
                     Text(
                       "23°",
