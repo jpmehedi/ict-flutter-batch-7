@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
+  static const String path = "DetailsScreen";
   const DetailsScreen({ Key? key }) : super(key: key);
 
   @override
@@ -29,7 +30,12 @@ class DetailsScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Icon(Icons.arrow_back_ios, color: Colors.white,),
+                        IconButton(
+                          onPressed: (){
+                            Navigator.pop(context);
+                          }, 
+                          icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
+                        )
                       ],
                     ),
                   ),
