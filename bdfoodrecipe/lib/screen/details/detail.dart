@@ -1,24 +1,40 @@
-import 'package:bdfoodrecipe/screens/favorite/favorite.dart';
-import 'package:bdfoodrecipe/screens/video/video_screen.dart';
+
+import 'dart:math';
+
+import 'package:bdfoodrecipe/db/db_helper.dart';
+import 'package:bdfoodrecipe/model/recipe_model.dart';
+import 'package:bdfoodrecipe/screen/video/video.dart';
 import 'package:bdfoodrecipe/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
+
+// ignore: must_be_immutable
 class DetailScreen extends StatelessWidget {
   static const String path = "DetailScreen";
-  const DetailScreen({ Key? key }) : super(key: key);
 
-  shareData(items){
-    String data ="""
 
-${items["title"]}
+   void _onShare(BuildContext context, text, subject) async {
+    if (subject.isNotEmpty) {
+      await Share.share(
+        "$text",
+        subject: "$subject",
+      );
+    } else {
+      await Share.share(
+        "Dummy text",
+        subject: "Dummy Subject",
+      );
+    }
+  }
 
-${items["ingredients"].toString()}
+  
+  Random random = Random();
+  
 
-${items["directions"].toString()}
-    
-    """;
-    Share.share("$data", subject: 'Look what I made!');
+
+  String getShareData(title, ingredients, directons){
+    return title + ingredients.toString() + directons.toString();
   }
 
   @override
@@ -41,7 +57,7 @@ ${items["directions"].toString()}
         actions: [
           IconButton(
             onPressed: (){
-              shareData(items["data"]);
+              _onShare(context,  getShareData(items["data"]["title"], items["data"]["ingredients"], items["data"]["directions"]), "Subject");
             }, 
             icon: Icon(Icons.share)
           )
@@ -66,9 +82,9 @@ ${items["directions"].toString()}
                 Positioned(
                   bottom: 0,
                   child: Container(
-                    padding: EdgeInsets.only(left: 10),
+                    padding: EdgeInsets.only(left: 10, top: 5, bottom: 5),
                     width: size,
-                    height: 56,
+                    height: 64,
                     color: Colors.black.withOpacity(0.50),
                     child: Center(
                       child: Text(items["data"]['title'], style: TextStyle(
@@ -89,8 +105,17 @@ ${items["directions"].toString()}
                 color: Colors.orange,
               ),
               CustomButton(
-                onTap: (){
-                  Navigator.pushNamed(context, FavoriteScreen.path, arguments: items["data"]);
+                onTap: ()async{
+                  final recipeModel  = RecipeModel(
+                      id: random.nextInt(100),
+                    title: items["data"]['title'],
+                    image: items["data"]['image'],
+                    ingredients: items["data"]["ingredients"].toString(),
+                    directions: items["data"]["directions"].toString(),
+                    youtubeUrl: items["data"]["youtubeUrl"]
+                  );
+                  await DbHelper.instance.addFavoriteRecipe(recipeModel);
+                  
                 },
                 icon: Icons.favorite,
                 lebel: "Favorite",
@@ -98,13 +123,12 @@ ${items["directions"].toString()}
               ),
               CustomButton(
                 onTap: (){
-                  Navigator.pushNamed(context, VideoScreen.path, arguments:  items["data"]);
+                  Navigator.pushNamed(context, YoutubeScreen.path, arguments: items["data"]);
                 },
                 icon: Icons.video_camera_back,
                 lebel: "Video",
                 color: Colors.red,
               )
-              
             ],
           ),
           Expanded(

@@ -1,7 +1,7 @@
-import 'package:bdfoodrecipe/screens/details/details.dart';
-import 'package:bdfoodrecipe/screens/favorite/favorite.dart';
-import 'package:bdfoodrecipe/screens/home/home.dart';
-import 'package:bdfoodrecipe/screens/video/video_screen.dart';
+import 'package:bdfoodrecipe/screen/details/detail.dart';
+import 'package:bdfoodrecipe/screen/favorite.dart';
+import 'package:bdfoodrecipe/screen/home/home.dart';
+import 'package:bdfoodrecipe/screen/video/video.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,17 +13,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Foodie',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       initialRoute: HomeScreen.path,
       routes: {
         HomeScreen.path: (ctx)=> HomeScreen(),
-        DetailScreen.path: (ctx)=> DetailScreen(),
-        FavoriteScreen.path: (ctx)=> FavoriteScreen(),
-        VideoScreen.path: (ctx)=> VideoScreen(),
+        DetailScreen.path: (ctx)=>DetailScreen(),
+        YoutubeScreen.path: (ctx)=>YoutubeScreen(),
+          Favorite.path: (ctx)=>Favorite(),
+        
       },
     );
   }
 }
+
