@@ -2,15 +2,15 @@ import 'package:bdfoodrecipe/db/db_helper.dart';
 import 'package:bdfoodrecipe/model/recipe_model.dart';
 import 'package:flutter/material.dart';
 
-class Favorite extends StatefulWidget {
-  static const String path = "Favorite";
-  const Favorite({Key? key}) : super(key: key);
+class Cooked extends StatefulWidget {
+  static const String path = "Cooked";
+  const Cooked({Key? key}) : super(key: key);
 
   @override
-  _FavoriteState createState() => _FavoriteState();
+  _CookedState createState() => _CookedState();
 }
 
-class _FavoriteState extends State<Favorite> {
+class _CookedState extends State<Cooked> {
   countIngradients(ingradients) {
     var _ingradients =
         ingradients.toString().replaceAll("[", "").replaceAll("]", "");
@@ -31,13 +31,13 @@ class _FavoriteState extends State<Favorite> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Favorite"),
+        title: Text("Cooked"),
         backgroundColor: Colors.red,
       ),
       body: Container(
         height: 400,
         child: FutureBuilder(
-          future: DbHelper.instance.getFavoriteRecipe(),
+          future: DbHelper.instance.getCookedRecipe(),
           builder: (BuildContext context,
               AsyncSnapshot<List<RecipeModel>> snapshot) {
             if (!snapshot.hasData) {
@@ -107,7 +107,7 @@ class _FavoriteState extends State<Favorite> {
                                 setState(() {
                                   isLoading = true;
                                 });
-                                DbHelper.instance.deleteFavoriteItem(recipe.id);
+                                DbHelper.instance.deleteCookedItem(recipe.id);
                                 setState(() {
                                   isLoading = false;
                                 });
